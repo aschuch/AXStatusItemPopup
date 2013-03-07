@@ -10,7 +10,7 @@ Simply drag and drop the .h and .m file from the ```AXStatusItemPopup``` into yo
 
 ## Usage
 
-```
+```objective-c
 AXStatusItemPopup *statusItemPopup = [[AXStatusItemPopup alloc] initWithViewController:contentViewController image:image alternateImage:alternateImage];
 ```
 
@@ -18,7 +18,7 @@ AXStatusItemPopup *statusItemPopup = [[AXStatusItemPopup alloc] initWithViewCont
 
 ### Full Example
 
-```
+```objective-c
 // init content view controller
 // its contents will be shown inside the popover
 ContentViewController *contentViewController = [[ContentViewController alloc] initWithNibName:@"ContentViewController" bundle:nil];
@@ -34,7 +34,7 @@ AXStatusItemPopup *statusItemPopup = [[AXStatusItemPopup alloc] initWithViewCont
 
 By default showing and hiding the popover is animated. However, animations on the popover can be globally disabled.
 
-```
+```objective-c
 statusItemPopup.animated = NO;
 ```
 
@@ -42,7 +42,7 @@ statusItemPopup.animated = NO;
 
 The popover can be shown and hidden manually within code by calling the following methods on the ```AXStatusItemPopup``` instance.
 
-```
+```objective-c
 // animation defaults to the value set in statusItemPopup.animated
 [statusItemPopup showPopover]; 
 
