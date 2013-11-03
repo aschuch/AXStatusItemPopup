@@ -1,5 +1,4 @@
-pod 'GPHTTPRequest', '~> 0.0'
-d::Spec.new do |s|
+Pod::Spec.new do |s|
   s.name         = "AXStatusItemPopup"
   s.version      = "0.0.1"
   s.summary      = "NSStatusItem that shows a little NSPopover when clicked."
@@ -28,4 +27,3 @@ LICENSE
   s.source       = { :git => "https://github.com/aschuch/AXStatusItemPopup.git", :commit => "8ae2ccaa7f55a488004a6f20c2d3af4056072e30" }
   s.source_files  = "AXStatusItemPopup/*.{h,m}"
 end
-
