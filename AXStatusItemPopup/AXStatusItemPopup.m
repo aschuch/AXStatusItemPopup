@@ -53,8 +53,8 @@
         _imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, kMinViewWidth, height)];
         [self addSubview:_imageView];
         
-        _statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-        _statusItem.view = self;
+        self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+        self.statusItem.view = self;
         
         _active = NO;
         _animated = YES;

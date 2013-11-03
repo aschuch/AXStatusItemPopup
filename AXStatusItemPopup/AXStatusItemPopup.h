@@ -15,6 +15,7 @@
 @property(assign, nonatomic) BOOL animated;
 @property(strong, nonatomic) NSImage *image;
 @property(strong, nonatomic) NSImage *alternateImage;
+@property(strong, nonatomic) NSStatusItem *statusItem;
 
 
 // init
