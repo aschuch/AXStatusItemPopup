@@ -19,6 +19,7 @@
     NSImageView *_imageView;
     NSStatusItem *_statusItem;
     NSPopover *_popover;
+    id _popoverTransiencyMonitor;
 }
 @end
 
@@ -158,6 +159,9 @@
     if (!_popover.isShown) {
         _popover.animates = animated;
         [_popover showRelativeToRect:self.frame ofView:self preferredEdge:NSMinYEdge];
+        _popoverTransiencyMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask|NSRightMouseDownMask handler:^(NSEvent* event) {
+            [self hidePopover];
+        }];
     }
 }
 
@@ -167,6 +171,7 @@
     
     if (_popover && _popover.isShown) {
         [_popover close];
+        [NSEvent removeMonitor:_popoverTransiencyMonitor];
     }
 }
 
