@@ -18,6 +18,7 @@
     BOOL _active;
     NSImageView *_imageView;
     NSStatusItem *_statusItem;
+    NSMenu *_dummyMenu;
     NSPopover *_popover;
     id _popoverTransiencyMonitor;
 }
@@ -56,6 +57,7 @@
         
         self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
         self.statusItem.view = self;
+        _dummyMenu = [[NSMenu alloc] init];
         
         _active = NO;
         _animated = YES;
@@ -158,6 +160,7 @@
     
     if (!_popover.isShown) {
         _popover.animates = animated;
+        [self.statusItem popUpStatusItemMenu:_dummyMenu];
         [_popover showRelativeToRect:self.frame ofView:self preferredEdge:NSMinYEdge];
         _popoverTransiencyMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask|NSRightMouseDownMask handler:^(NSEvent* event) {
             [self hidePopover];
