@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AXStatusItemPopup"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "NSStatusItem that shows a little NSPopover when clicked."
   s.homepage     = "https://github.com/aschuch/AXStatusItemPopup"
   s.license      = { :type => "MIT", :text => <<-LICENSE
