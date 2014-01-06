@@ -24,6 +24,6 @@ LICENSE
 }
   s.author       = { "Alexander Schuch" => "alexander@schuch.me" }
   s.platform     = :osx, "10.7"
-  s.source       = { :git => "https://github.com/aschuch/AXStatusItemPopup.git", :commit => "9a015cb4033824d98082de9605ceedfe3d0c5cd6" }
+  s.source       = { :git => "https://github.com/aschuch/AXStatusItemPopup.git", :tag => s.version.to_s }
   s.source_files  = "AXStatusItemPopup/*.{h,m}"
 end
