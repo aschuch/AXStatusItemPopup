@@ -29,4 +29,7 @@
 - (void)showPopoverAnimated:(BOOL)animated;
 - (void)hidePopover;
 
+// view size
+- (void)setContentSize:(CGSize *)size;
+
 @end
