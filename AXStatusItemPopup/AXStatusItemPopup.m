@@ -171,7 +171,11 @@
     
     if (_popover && _popover.isShown) {
         [_popover close];
-        [NSEvent removeMonitor:_popoverTransiencyMonitor];
+
+		if (_popoverTransiencyMonitor) {
+            [NSEvent removeMonitor:_popoverTransiencyMonitor];
+            _popoverTransiencyMonitor = nil;
+        }
     }
 }
 
