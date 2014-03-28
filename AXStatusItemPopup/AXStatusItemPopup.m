@@ -87,7 +87,7 @@
 #pragma mark - Position / Size
 ////////////////////////////////////
 
-- (void)setContentSize:(CGSize *)size
+- (void)setContentSize:(CGSize)size
 {
     _popover.contentSize = size;
 }
