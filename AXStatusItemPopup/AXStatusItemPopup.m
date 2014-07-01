@@ -107,6 +107,11 @@
     }    
 }
 
+- (void)rightMouseDown:(NSEvent *)theEvent
+{
+    [self mouseDown:nil];
+}
+
 ////////////////////////////////////
 #pragma mark - Setter
 ////////////////////////////////////
