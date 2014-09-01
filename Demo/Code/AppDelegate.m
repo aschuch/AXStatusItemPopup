@@ -62,4 +62,16 @@
     [_statusItemPopup hidePopover];
 }
 
+- (IBAction)appearanceValueChanged:(id)sender {
+    if ([_statusItemPopup isActive]) {
+        [_statusItemPopup hidePopover];
+    }
+    
+    NSButton *checkBox = (NSButton*) sender;
+    NSPopoverAppearance newAppearance = NSPopoverAppearanceMinimal;
+    if ([(NSCell*)checkBox.cell state] == 1) {
+        newAppearance = NSPopoverAppearanceHUD;
+    }
+    [_statusItemPopup setPopoverAppearance:newAppearance];
+}
 @end
