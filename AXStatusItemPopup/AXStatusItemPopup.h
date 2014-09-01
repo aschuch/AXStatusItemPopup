@@ -17,6 +17,13 @@
 @property(strong, nonatomic) NSImage *alternateImage;
 @property(strong, nonatomic) NSStatusItem *statusItem;
 
+/**
+ Popovers may have one of several predefined appearances.
+ You may specify the appearance of a popover using the constants defined in NSPopoverAppearance. The default appearance is NSPopoverAppearanceMinimal.
+ 
+ @param appearance NSPopoverAppearance
+ */
+@property(nonatomic, assign) NSPopoverAppearance popoverAppearance;
 
 // init
 - (id)initWithViewController:(NSViewController *)controller;
@@ -31,13 +38,5 @@
 
 // view size
 - (void)setContentSize:(CGSize)size;
-
-/**
- Popovers may have one of several predefined appearances.
- You may specify the appearance of a popover using the constants defined in NSPopoverAppearance. The default appearance is NSPopoverAppearanceMinimal.
- 
- @param appearance NSPopoverAppearance
- */
-- (void) setPopoverAppearance:(NSPopoverAppearance) appearance;
 
 @end

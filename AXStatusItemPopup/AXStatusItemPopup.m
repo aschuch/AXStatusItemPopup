@@ -23,8 +23,6 @@
     id _popoverTransiencyMonitor;
 }
 
-@property(nonatomic, assign) NSPopoverAppearance popoverAppearance;
-
 @end
 
 ///////////////////////////////////
@@ -199,10 +197,6 @@
             _popoverTransiencyMonitor = nil;
         }
     }
-}
-
-- (void) setPopoverAppearance:(NSPopoverAppearance) appearance {
-    _popoverAppearance = appearance;
 }
 
 @end
