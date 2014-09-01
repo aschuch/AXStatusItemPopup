@@ -22,6 +22,9 @@
     NSPopover *_popover;
     id _popoverTransiencyMonitor;
 }
+
+@property(nonatomic, assign) NSPopoverAppearance popoverAppearance;
+
 @end
 
 ///////////////////////////////////
@@ -48,6 +51,7 @@
     self = [super initWithFrame:NSMakeRect(0, 0, kMinViewWidth, height)];
     if (self) {
         _viewController = controller;
+        _popoverAppearance = NSPopoverAppearanceMinimal;
         
         self.image = image;
         self.alternateImage = alternateImage;
@@ -173,6 +177,7 @@
     }
     
     if (!_popover.isShown) {
+        _popover.appearance = _popoverAppearance;        
         _popover.animates = animated;
         [self.statusItem popUpStatusItemMenu:_dummyMenu];
         [_popover showRelativeToRect:self.frame ofView:self preferredEdge:NSMinYEdge];
@@ -194,6 +199,10 @@
             _popoverTransiencyMonitor = nil;
         }
     }
+}
+
+- (void) setPopoverAppearance:(NSPopoverAppearance) appearance {
+    _popoverAppearance = appearance;
 }
 
 @end
