@@ -23,7 +23,7 @@
  
  @param appearance NSPopoverAppearance
  */
-@property(nonatomic, assign) NSPopoverAppearance popoverAppearance;
+@property(nonatomic, strong, readonly) NSPopover *popover;
 
 // init
 - (id)initWithViewController:(NSViewController *)controller;

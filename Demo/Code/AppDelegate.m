@@ -72,6 +72,6 @@
     if ([(NSCell*)checkBox.cell state] == 1) {
         newAppearance = NSPopoverAppearanceHUD;
     }
-    [_statusItemPopup setPopoverAppearance:newAppearance];
+    _statusItemPopup.popover.appearance = newAppearance;
 }
 @end

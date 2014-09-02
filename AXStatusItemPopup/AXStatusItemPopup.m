@@ -19,9 +19,10 @@
     NSImageView *_imageView;
     NSStatusItem *_statusItem;
     NSMenu *_dummyMenu;
-    NSPopover *_popover;
     id _popoverTransiencyMonitor;
 }
+
+@property(nonatomic, strong, readwrite) NSPopover* popover;
 
 @end
 
@@ -49,7 +50,6 @@
     self = [super initWithFrame:NSMakeRect(0, 0, kMinViewWidth, height)];
     if (self) {
         _viewController = controller;
-        _popoverAppearance = NSPopoverAppearanceMinimal;
         
         self.image = image;
         self.alternateImage = alternateImage;
@@ -175,7 +175,6 @@
     }
     
     if (!_popover.isShown) {
-        _popover.appearance = _popoverAppearance;        
         _popover.animates = animated;
         [self.statusItem popUpStatusItemMenu:_dummyMenu];
         [_popover showRelativeToRect:self.frame ofView:self preferredEdge:NSMinYEdge];
