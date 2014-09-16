@@ -19,9 +19,11 @@
     NSImageView *_imageView;
     NSStatusItem *_statusItem;
     NSMenu *_dummyMenu;
-    NSPopover *_popover;
     id _popoverTransiencyMonitor;
 }
+
+@property(nonatomic, strong, readwrite) NSPopover* popover;
+
 @end
 
 ///////////////////////////////////
